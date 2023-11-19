@@ -1,4 +1,3 @@
-
 const validarDeportes = (deportes) => {
     if (deportes=="") return false;
 
@@ -80,25 +79,27 @@ const validarForm = () => {
     };
 
     if (!validarDeportes(deportes)) {
-        setInvalidInput("Deportes. Seleccione entre 1 a 3 opciones válidas.");
+        setInvalidInput("Deportes");
     } if (!validarRegion(region)) {
-        setInvalidInput("Región. Seleccione una opción válida.");
+        setInvalidInput("Región");
     } if (!validarComuna(comuna)) {
-        setInvalidInput("Comuna. Seleccione una opción válida.");  
+        setInvalidInput("Comuna");  
     } if (!validarTransporte(transporte)) {
-        setInvalidInput("Modo de transporte. Seleccione una opción válida.");  
+        setInvalidInput("Modo de transporte");  
     } if (!validarNombre(nombre)) {
-        setInvalidInput("Nombre. Ingrese su nombre (sin espacios ni caracteres especiales) de 3 a 80 letras.");
+        setInvalidInput("Nombre");
     } if (!validarEmail(email)) {
-        setInvalidInput("Email de contacto. Ingrese un correo con formato válido.");
+        setInvalidInput("Email de contacto");
     } if (!validarNumero(numero)) {
-        setInvalidInput("Número celular de contacto. Ingrese un formato válido (ej: +56 9 1234 5678).");
+        setInvalidInput("Número de contacto");
     }
 
     // finally display validation
     let validationBox = document.getElementById("val-box");
-    let validationMessageElem = document.getElementById("val-msg");
+    
     let validationListElem = document.getElementById("val-list");
+    
+    validationListElem.innerText = "Los siguiente campos son inválidos: ";
 
     let sentBox = document.getElementById("sent-box");
 
@@ -110,17 +111,10 @@ const validarForm = () => {
     };
 
     if (!isValid) {
-        validationListElem.textContent = "";
-        // add invalid elements to val-list element.
-        
-        for (let input of invalidInputs) {
-            let listElement = document.createElement("li");
-            listElement.innerText = input;
-            validationListElem.append(listElement);
-        }
-        // set val-msg
-        validationMessageElem.innerText = "Los siguiente campos son inválidos:";
-
+        let invalidInputsLower = invalidInputs.map(elemento => elemento.toLowerCase());
+        let invalidInputsString = invalidInputsLower.join(', ');
+        validationListElem.innerText += invalidInputsString;
+       
         // make validation prompt visible
         validationBox.hidden = false;
 

@@ -16,7 +16,7 @@
 /* Estilos de tipo */
 
 body {
-  background-image: url(img/fondo7.png);
+  background-image: url(img/fondo4.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -28,23 +28,26 @@ form {
 }
 
 input[type="button"] {
-  color: #004176;
+  font-family: 'DIN Regular';
+  color: black;
   background-color: white;
-  border: .125em solid #d5ecf5;
   padding: .5em;
 }
 
 input[type="text"] {
+  font-family: 'DIN Regular';
   width: 15vw;
   line-height: 1.7em;
 }
 
 input[type="email"] {
+  font-family: 'DIN Regular';
   width: 15vw;
   line-height: 1.7em;
 }
 
 select {
+  font-family: 'DIN Regular';
   width: 15vw;
   height: 1.675vw;
 }
@@ -63,6 +66,7 @@ form fieldset {
 /* Estilos de clase */
 
 .popup {
+  color: black;
   display: none;
   position: fixed;
   top: 50%;
@@ -70,8 +74,7 @@ form fieldset {
   transform: translate(-50%, -50%);
   padding: 1.25em;
   background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px black;
   z-index: 1000;
 }
 
@@ -83,23 +86,29 @@ form fieldset {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  padding: 1.25em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
   background-color: #004176;
   width: 50vw;
-  height: 60vh;
+  height: 65vh;
 }
 
 /* Estilos de id */
 
 #confirmation-btn {
-  color:aqua;
+  ;
 }
 
 #val-box {
   font-size: 0.7em;
   text-align: left;
   background-color: #002e54;
-  padding: 0.7em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
 }
 
 #deportes {
