@@ -1,0 +1,123 @@
+
+/* Rojo: #fe4f3a */
+/* Azul: #0073ff */
+/* Amarillo: #ffd200 */
+/* Turquesa: #00cccc */
+/* Azul oscuro: #004176 */
+/* Turquesa oscuro: #1eb5b1 */
+/* Celeste claro: #d5ecf5 */
+
+/* Estilos generales */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos de tipo */
+
+body {
+  background-image: url(img/fondo7.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+form {
+  color: --;
+}
+
+input[type="button"] {
+  color: #004176;
+  background-color: white;
+  border: .125em solid #d5ecf5;
+  padding: .5em;
+}
+
+input[type="text"] {
+  width: 15vw;
+  line-height: 1.7em;
+}
+
+input[type="email"] {
+  width: 15vw;
+  line-height: 1.7em;
+}
+
+select {
+  width: 15vw;
+  height: 1.675vw;
+}
+
+label {
+  line-height: 2;
+  font-family: 'DIN Bold';
+}
+
+form fieldset {
+  float: left;
+  width: 23vw;
+  border: 0px;
+}
+
+/* Estilos de clase */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.25em;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.main-container{
+  color: white;
+  font-family: 'DIN Regular';
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 1.25em;
+  background-color: #004176;
+  width: 50vw;
+  height: 60vh;
+}
+
+/* Estilos de id */
+
+#confirmation-btn {
+  color:aqua;
+}
+
+#val-box {
+  font-size: 0.7em;
+  text-align: left;
+  background-color: #002e54;
+  padding: 0.7em;
+}
+
+#deportes {
+  height: 3vw;
+}
+
+/* Fuentes */
+
+@font-face {
+  font-family: 'DIN Regular';
+  src: url('fonts/din-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'DIN Bold';
+  src: url('fonts/din-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
