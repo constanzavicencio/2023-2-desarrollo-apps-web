@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+  }
+  
+/* Estilos de tipo */
+
+body {
+  font-family: 'DIN Regular';
+  font-weight: normal;
+  background-image: url(img/fondo-visualizacion.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+button{
+  color: black;
+  background-color: white;
+  position: fixed;
+  top: 90%;
+  padding: .5em; 
+  border: 0;
+}
+
+/* Estilos de clase */
+
+.main-container{
+  color: white;
+  place-items: center;
+  position: fixed;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  background-color: #004176;
+  width: 85vw;
+  height: 70vh;
+}
+
+.img{
+    position:absolute;
+    top:2vh;
+    left:42vw;
+    width:640px;
+    height:480px;
+}
+
+.img:hover{
+  color: #424242; 
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  opacity: 1;
+  transform: scale(2);
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+}
+
+ /* Fuentes */
+
+@font-face {
+    font-family: 'DIN Regular';
+    src: url('fonts/din-regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+@font-face {
+  font-family: 'DIN Regular';
+  src: url('fonts/din-bold.ttf') format('truetype');
+  font-style: bold;
+  font-weight: bold;
+}

@@ -16,15 +16,32 @@
 /* Estilos de tipo */
 
 body {
-  background-image: url(img/fondo4.png);
+  background-image: url(img/fondo.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
 }
 
+button{
+  font-family: 'DIN Regular';
+  color: black;
+  background-color: white;
+  padding: .5em; 
+  border: 0; 
+}
+
 form {
   color: --;
+}
+
+textarea {
+  font-family: 'DIN Regular';
+  color: black;
+  background-color: white;
+  padding: .5em;
+  width: 15vw;
+  height: 6vh;
 }
 
 input[type="button"] {
@@ -46,6 +63,12 @@ input[type="email"] {
   line-height: 1.7em;
 }
 
+input[type="file"] {
+  font-family: 'DIN Regular';
+  width: 15vw;
+  line-height: 1.7em;
+}
+
 select {
   font-family: 'DIN Regular';
   width: 15vw;
@@ -60,7 +83,7 @@ label {
 form fieldset {
   float: left;
   width: 23vw;
-  border: 0px;
+  border: 0;
 }
 
 /* Estilos de clase */
@@ -96,10 +119,6 @@ form fieldset {
 }
 
 /* Estilos de id */
-
-#confirmation-btn {
-  ;
-}
 
 #val-box {
   font-size: 0.7em;

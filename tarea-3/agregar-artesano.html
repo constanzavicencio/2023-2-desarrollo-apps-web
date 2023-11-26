@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar hincha</title>
+    <title>Registro artesano</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://github.com/necolas/normalize.css/blob/master/normalize.css"></script>
     <script src="./gestor-comunas/regiones-comunas.js"></script>
     <script src="./gestor-comunas/gestor-regiones-comunas.js"></script>
     <script src="./gestor-deportes/deportes.js"></script>
     <script src="./gestor-deportes/gestor-deportes.js"></script>
-
-    <script src="https://github.com/necolas/normalize.css/blob/master/normalize.css"></script>
     <link rel="stylesheet" type="text/css" href="./estilos/style.css">
+
     <link rel="icon" type="image/png" href="./estilos/img/logo.png">
 </head>
 
 <body>
     <div class="main-container">
         <div>
-          <h2>Registro hinchas</h2>
+          <h2>Registro artesanos</h2>
           <p>A continuación, rellene el formulario con sus datos.</p>
         </div>
 
@@ -28,27 +28,37 @@
             <p id="val-list"></p>
         </div>
 
-        
-        <form id="formulario-hincha" method="post" enctype="multipart/form-data">
+        <form id="formulario-artesano" method="post" enctype="multipart/form-data">
         <fieldset>
-            <label for="deportes">Deportes</label><br>
-            <select id="deportes" multiple required></select><br>
-
             <label for="regiones">Región</label><br>
             <select id="regiones"></select><br>
 
             <label for="comunas">Comuna</label><br>
             <select id="comunas"></select><br>
 
-            <label for="transporte">Modo de transporte</label><br>
-            <select id="transporte" required>
-                <option value="">Seleccione un transporte</option>
-                <option value="particular">Particular</option>
-                <option value="locomocion_publica">Locomoción pública</option>
+            <label for="tipoArtesania">Tipo de artesanía</label><br>
+            <select id="tipoArtesania" multiple required>
+                <option value="seleccione">Seleccione un tipo de artesanía</option>
+                <option value="marmol">Mármol</option>
+                <option value="madera">Madera</option>
+                <option value="ceramica">Cerámica</option>
+                <option value="mimbre">Mimbre</option>
+                <option value="metal">Metal</option>
+                <option value="cuero">Cuero</option>
+                <option value="telas">Telas</option>
+                <option value="joyas">Joyas</option>
+                <option value="otro tipo">Otro tipo</option>
             </select><br>
+
+            <label for="descArtesania">Descripción artesanías</label><br>
+            <textarea id="descArtesania" rows="4" cols="50"></textarea><br>
+            
         </fieldset>
 
         <fieldset>
+            <label for="imgArtesanias">Fotos artesanías</label><br>
+            <input type="file" id="imgArtesanias" accept="image/*" multiple required><br>
+
             <label for="nombre">Nombre</label><br>
             <input type="text" id="nombre" minlength="3" maxlength="80" required><br>
 
@@ -56,27 +66,24 @@
             <input type="email" id="email" maxlength="30" required><br>
 
             <label for="numero">Número celular de contacto</label><br>
-            <input type="text" id="numero" minlength="15" maxlength="15"><br>
-
-            <label for="comentarios">Comentarios adicionales</label><br>
-            <input type="text" id="comentarios" maxlength="80"><br><br>
+            <input type="text" id="numero" minlength="15" maxlength="15"><br><br>
         </fieldset>
 
             <br><input id="submit-btn" type="button" value="Enviar">
       </form>
 
       <div class="popup" id="confirmation-box">
-        <p>¿Confirma el registro de este hincha?</p>
+        <p>¿Confirma el registro de este artesano?</p>
         <input id="confirmation-btn" type="button" value="Sí, confirmo.">
         <input id="cancel-btn" type="button" value="No, cancelar.">
       </div>
 
       <div id="sent-box" hidden>
-        <p>Hemos recibido el registro de Hincha. Muchas gracias.</p>
+        <p>Hemos recibido el registro de artesano. Muchas gracias.</p>
         <p><a href="./index.html">Volver al inicio</a></p>
       </div>
 
-      <script src="./validaciones/validacion-hincha.js"></script>
+      <script src="./validaciones/validacion-artesano.js"></script>
     </div>
 </body>
 

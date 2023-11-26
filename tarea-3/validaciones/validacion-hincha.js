@@ -110,6 +110,10 @@ const validarForm = () => {
         formHincha.submit();
     };
 
+    const cerrarPopup = () => {
+        document.querySelector('.popup').style.display = 'none';
+    };
+
     if (!isValid) {
         let invalidInputsLower = invalidInputs.map(elemento => elemento.toLowerCase());
         let invalidInputsString = invalidInputsLower.join(', ');
@@ -120,12 +124,10 @@ const validarForm = () => {
 
     } else if (isValid) {
         document.querySelector('.popup').style.display = 'block';
-        console.log('La función isValid se está ejecutando...');
         let confirmationBtn = document.getElementById("confirmation-btn");
-        console.log('La función isValid2se está ejecutando...');
         confirmationBtn.addEventListener("click", enviarForm);
-        console.log('La función isValid3 se está ejecutando...');
-        
+        let cancelBtn = document.getElementById("cancel-btn");
+        cancelBtn.addEventListener("click", cerrarPopup)
     }
 };
 
