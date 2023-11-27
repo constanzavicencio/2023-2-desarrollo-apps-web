@@ -13,7 +13,7 @@ body {
 }
 
 button{
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   color: black;
   background-color: white;
   padding: .5em; 
@@ -27,7 +27,7 @@ button{
 
 .main-container{
   color: white;
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   place-items: center;
   position: fixed;
   top: 50%;
@@ -47,7 +47,7 @@ button{
   grid-template-columns: repeat(2, 1fr); /* Divide el contenedor en dos columnas iguales */
   grid-gap: 10px; /* Ajusta el espacio entre los botones según tus preferencias */
   color: white;
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   text-align: center;
   place-items: center;
   position: fixed;
@@ -66,7 +66,7 @@ button{
 /* Fuentes */
 
 @font-face {
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   src: url('fonts/din-regular.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;

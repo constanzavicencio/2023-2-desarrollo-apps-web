@@ -24,7 +24,7 @@ body {
 }
 
 button{
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   color: black;
   background-color: white;
   padding: .5em; 
@@ -36,7 +36,7 @@ form {
 }
 
 textarea {
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   color: black;
   background-color: white;
   padding: .5em;
@@ -45,32 +45,32 @@ textarea {
 }
 
 input[type="button"] {
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   color: black;
   background-color: white;
   padding: .5em;
 }
 
 input[type="text"] {
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   width: 15vw;
   line-height: 1.7em;
 }
 
 input[type="email"] {
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   width: 15vw;
   line-height: 1.7em;
 }
 
 input[type="file"] {
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   width: 15vw;
   line-height: 1.7em;
 }
 
 select {
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   width: 15vw;
   height: 1.675vw;
 }
@@ -103,7 +103,7 @@ form fieldset {
 
 .main-container{
   color: white;
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   text-align: center;
   position: fixed;
   top: 50%;
@@ -137,15 +137,15 @@ form fieldset {
 /* Fuentes */
 
 @font-face {
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   src: url('fonts/din-regular.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'DIN Bold';
+  font-family: 'DIN';
   src: url('fonts/din-bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
+  font-style: bold;
+  font-weight: bold;
 }

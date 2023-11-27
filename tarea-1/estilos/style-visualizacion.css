@@ -5,7 +5,7 @@
 /* Estilos de tipo */
 
 body {
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   font-weight: normal;
   background-image: url(img/fondo-visualizacion.png);
   background-position: bottom;
@@ -65,14 +65,14 @@ button{
  /* Fuentes */
 
 @font-face {
-    font-family: 'DIN Regular';
+    font-family: 'DIN';
     src: url('fonts/din-regular.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
   }
   
 @font-face {
-  font-family: 'DIN Regular';
+  font-family: 'DIN';
   src: url('fonts/din-bold.ttf') format('truetype');
   font-style: bold;
   font-weight: bold;
