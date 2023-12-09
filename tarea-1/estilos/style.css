@@ -1,16 +1,7 @@
-
-/* Rojo: #fe4f3a */
-/* Azul: #0073ff */
-/* Amarillo: #ffd200 */
-/* Turquesa: #00cccc */
-/* Azul oscuro: #004176 */
-/* Turquesa oscuro: #1eb5b1 */
-/* Celeste claro: #d5ecf5 */
-
-/* Estilos generales */
-
 * {
   box-sizing: border-box;
+  font-family: 'DIN';
+  font-weight: normal;
 }
 
 /* Estilos de tipo */
@@ -25,6 +16,7 @@ body {
 
 button{
   font-family: 'DIN';
+  font-weight: normal;
   color: black;
   background-color: white;
   padding: .5em; 
@@ -37,6 +29,7 @@ form {
 
 textarea {
   font-family: 'DIN';
+  font-weight: normal;
   color: black;
   background-color: white;
   padding: .5em;
@@ -46,6 +39,7 @@ textarea {
 
 input[type="button"] {
   font-family: 'DIN';
+  font-weight: normal;
   color: black;
   background-color: white;
   padding: .5em;
@@ -53,31 +47,36 @@ input[type="button"] {
 
 input[type="text"] {
   font-family: 'DIN';
+  font-weight: normal;
   width: 15vw;
   line-height: 1.7em;
 }
 
 input[type="email"] {
   font-family: 'DIN';
+  font-weight: normal;
   width: 15vw;
   line-height: 1.7em;
 }
 
 input[type="file"] {
   font-family: 'DIN';
+  font-weight: normal;
   width: 15vw;
   line-height: 1.7em;
 }
 
 select {
   font-family: 'DIN';
+  font-weight: normal;
   width: 15vw;
   height: 1.675vw;
 }
 
 label {
   line-height: 2;
-  font-family: 'DIN Bold';
+  font-family: 'DIN';
+  font-weight: bold;
 }
 
 form fieldset {
@@ -104,6 +103,7 @@ form fieldset {
 .main-container{
   color: white;
   font-family: 'DIN';
+  font-weight: normal;
   text-align: center;
   position: fixed;
   top: 50%;
@@ -138,6 +138,7 @@ form fieldset {
 
 @font-face {
   font-family: 'DIN';
+  font-weight: normal;
   src: url('fonts/din-regular.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
@@ -145,6 +146,7 @@ form fieldset {
 
 @font-face {
   font-family: 'DIN';
+  font-weight: normal;
   src: url('fonts/din-bold.ttf') format('truetype');
   font-style: bold;
   font-weight: bold;
