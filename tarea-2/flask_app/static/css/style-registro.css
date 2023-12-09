@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Estilos de tipo */
+  
+  body {
+    background-image: url(img/fondo.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+  
+  button{
+    font-family: 'DIN';
+    color: black;
+    background-color: white;
+    padding: .5em; 
+    border: 0; 
+  }
+  
+  form {
+    color: --;
+  }
+  
+  textarea {
+    font-family: 'DIN';
+    color: black;
+    background-color: white;
+    padding: .5em;
+    width: 15vw;
+    height: 6vh;
+  }
+  
+  input[type="button"] {
+    font-family: 'DIN';
+    color: black;
+    background-color: white;
+    padding: .5em;
+  }
+  
+  input[type="text"] {
+    font-family: 'DIN';
+    width: 15vw;
+    line-height: 1.7em;
+  }
+  
+  input[type="email"] {
+    font-family: 'DIN';
+    width: 15vw;
+    line-height: 1.7em;
+  }
+  
+  input[type="file"] {
+    font-family: 'DIN';
+    width: 15vw;
+    line-height: 1.7em;
+  }
+  
+  select {
+    font-family: 'DIN';
+    width: 15vw;
+    height: 1.675vw;
+  }
+  
+  label {
+    line-height: 2;
+    font-family: 'DIN Bold';
+  }
+  
+  form fieldset {
+    float: left;
+    width: 23vw;
+    border: 0;
+  }
+  
+  /* Estilos de clase */
+  
+  .popup {
+    color: black;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.25em;
+    background-color: #fff;
+    box-shadow: 0 2px 10px black;
+    z-index: 1000;
+  }
+  
+  .main-container{
+    color: white;
+    font-family: 'DIN';
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    background-color: #004176;
+    width: 50vw;
+    height: 65vh;
+  }
+  
+  /* Estilos de id */
+  
+  #val-box {
+    font-size: 0.7em;
+    text-align: left;
+    background-color: #002e54;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+  }
+  
+  #deportes {
+    height: 3vw;
+  }
+  
+  /* Fuentes */
+  
+  @font-face {
+    font-family: 'DIN';
+    src: url('fonts/din-regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: 'DIN';
+    src: url('fonts/din-bold.ttf') format('truetype');
+    font-style: bold;
+    font-weight: bold;
+  }

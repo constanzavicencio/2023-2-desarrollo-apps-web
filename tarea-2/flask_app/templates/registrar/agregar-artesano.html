@@ -1,0 +1,102 @@
+{% extends 'registrar/base.html' %}
+{% block title %} Registro artesanos {% endblock %}
+{% block css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='css/style-registro.css')}}"
+/>
+{% endblock %}
+{% block content %}
+<div class="titulo-artesano">
+  <div class="title">
+    <h2>Registro artesanos</h2>
+    <p>A continuación, rellene el formulario con sus datos.</p>
+    <div id="val-box" hidden>
+      <p id="val-msg"></p>
+      <p id="val-list"></p>
+    </div>
+    {% if error %}
+    <div class="error-message">{{ error }}
+    {% endif %}
+    </div>
+  </div>
+
+  <form id="formulario-artesano" method="post" enctype="multipart/form-data" action="/registrar_artesano">
+    <fieldset>
+      <div id="region-input" class="grupo-input">
+        <label for="region">Región</label><br>
+        <select id="region">
+          {% for region in regiones %}
+            <option value="{{ region['id'] }}">{{ region['nombre'] }}</option>
+          {% endfor %}
+        </select><br>
+      </div>
+  
+      <div id="comuna-input" class="grupo-input">
+        <label for="comuna">Comuna</label><br>
+        <select id="comuna">
+          {% for comuna in comunas %}
+            <option value="{{ comuna['id'] }}">{{ comuna['nombre'] }}</option>
+          {% endfor %}
+        </select><br>
+      </div>
+  
+      <div id="tipoArtesania-input" class="grupo-input">
+        <label for="tipoArtesania">Tipo de artesanía</label><br>
+        <select id="tipoArtesania" multiple required>
+          {% for tipo in tipos_artesania %}
+            <option value="{{ tipo['id'] }}">{{ tipo['nombre'] }}</option>
+          {% endfor %}
+        </select><br>
+      </div>
+  
+      <div id="descArtesania-input" class="grupo-input">
+        <label for="descArtesania">Descripción artesanías</label><br>
+        <textarea id="descArtesania" rows="4" cols="50"></textarea><br>
+      </div>
+        
+    </fieldset>
+  
+    <fieldset>
+      <div id="descArtesania-input" class="grupo-input">
+        <label for="imgArtesanias">Fotos artesanías</label><br>
+        <input type="file" id="imgArtesanias" accept="image/*" multiple required><br>
+      </div>
+      
+      <div id="nombre-input" class="grupo-input">
+        <label for="nombre">Nombre</label><br>
+        <input type="text" id="nombre" minlength="3" maxlength="80" required><br>
+      </div>
+  
+      <div id="email-input" class="grupo-input">
+        <label for="email">Email de contacto</label><br>
+        <input type="email" id="email" maxlength="30" required><br>
+      </div>
+  
+      <div id="email-input" class="grupo-input">
+        <label for="numero">Número celular de contacto</label><br>
+        <input type="text" id="numero" minlength="15" maxlength="15"><br><br>
+      </div>
+    </fieldset>
+  
+    <div class="botones">
+      <input id="submit-btn" type="button" value="Enviar">
+    </div>
+  </form>
+  <div class="popup" id="confirmation-box">
+    <p>¿Confirma el registro de este artesano?</p>
+    <input id="confirmation-btn" type="button" value="Sí, confirmo.">
+    <input id="cancel-btn" type="button" value="No, cancelar.">
+  </div>
+  {% if envioConfirmado %}
+  <div id="sent-box">
+    <p>Hemos recibido el registro de artesano. Muchas gracias.</p>
+    <p><a href="./index.html">Volver al inicio</a></p>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
+{% block javascript %}
+
+{% endblock %}
