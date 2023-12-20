@@ -16,7 +16,7 @@ def index():
 def registrar_hincha():
     if request.method == 'GET':
         return render_template('registrar/agregar-hincha.html')
-    if request.method == 'POSThjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj':
+    if request.method == 'POST':
         return render_template('registrar/agregar-hincha.html')
 
 @app.route('/listado-artesanos', methods=['GET', 'POST'])
@@ -58,7 +58,8 @@ def registrar_artesano():
             return render_template("registrar/agregar-artesano.html", error=msg)
             #error += "Uno de los campos no es válido
     elif request.method == "GET":
-        return render_template("registrar/agregar-artesano.html")
+        msg = ""
+        return render_template("registrar/agregar-artesano.html", error=msg)
 
 
 if __name__ == '__main__':

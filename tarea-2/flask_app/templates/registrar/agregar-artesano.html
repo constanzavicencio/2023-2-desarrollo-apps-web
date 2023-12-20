@@ -7,6 +7,10 @@
   href="{{ url_for('static', filename='css/style-registro.css')}}"
 />
 {% endblock %}
+{% block javascript %}
+<script src="flask_app/static/js/gestor-comunas/regiones-comunas.js"></script>
+<script src="flask_app/static/js/gestor-comunas/gestor-regiones-comunas.js"></script>
+{% endblock %}
 {% block content %}
 <div class="titulo-artesano">
   <div class="title">
@@ -26,29 +30,28 @@
     <fieldset>
       <div id="region-input" class="grupo-input">
         <label for="region">Región</label><br>
-        <select id="region">
-          {% for region in regiones %}
-            <option value="{{ region['id'] }}">{{ region['nombre'] }}</option>
-          {% endfor %}
-        </select><br>
+        <select id="regiones"></select><br>
       </div>
   
       <div id="comuna-input" class="grupo-input">
         <label for="comuna">Comuna</label><br>
-        <select id="comuna">
-          {% for comuna in comunas %}
-            <option value="{{ comuna['id'] }}">{{ comuna['nombre'] }}</option>
-          {% endfor %}
-        </select><br>
+        <select id="comunas"></select><br>
       </div>
   
       <div id="tipoArtesania-input" class="grupo-input">
         <label for="tipoArtesania">Tipo de artesanía</label><br>
         <select id="tipoArtesania" multiple required>
-          {% for tipo in tipos_artesania %}
-            <option value="{{ tipo['id'] }}">{{ tipo['nombre'] }}</option>
-          {% endfor %}
-        </select><br>
+          <option value="seleccione">Seleccione un tipo de artesanía</option>
+          <option value="marmol">Mármol</option>
+          <option value="madera">Madera</option>
+          <option value="ceramica">Cerámica</option>
+          <option value="mimbre">Mimbre</option>
+          <option value="metal">Metal</option>
+          <option value="cuero">Cuero</option>
+          <option value="telas">Telas</option>
+          <option value="joyas">Joyas</option>
+          <option value="otro tipo">Otro tipo</option>
+      </select><br>
       </div>
   
       <div id="descArtesania-input" class="grupo-input">
@@ -59,7 +62,7 @@
     </fieldset>
   
     <fieldset>
-      <div id="descArtesania-input" class="grupo-input">
+      <div id="imgArtesania-input" class="grupo-input">
         <label for="imgArtesanias">Fotos artesanías</label><br>
         <input type="file" id="imgArtesanias" accept="image/*" multiple required><br>
       </div>
