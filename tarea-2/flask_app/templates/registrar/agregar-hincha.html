@@ -67,9 +67,8 @@
   <p><a href="./index.html">Volver al inicio</a></p>
 </div>
 
-<script src="./validaciones/validacion-hincha.js"></script>
 </div>
 {% endblock %}
 {% block javascript %}
-
+<script src="{{ url_for('static/js/validaciones', filename='validacion-hincha.js') }}"></script>
 {% endblock %}

@@ -88,15 +88,6 @@ form fieldset {
 
 /* Estilos de clase */
 
-.index-btn {
-  align-items: center;
-  background: white;
-  border: .2em solid var(--black-color);
-  border-radius: .25em;
-  margin: 1em 1em 2em 1em;
-  box-shadow: .3em .3em 0px 0px black;
-}
-
 .popup {
   color: black;
   display: none;

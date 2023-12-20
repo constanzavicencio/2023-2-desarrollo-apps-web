@@ -15,7 +15,9 @@ def index():
 @app.route('/registrar-hincha', methods=['GET', 'POST'])
 def registrar_hincha():
     if request.method == 'GET':
-        return render_template('registrar/registrar-hincha.html')
+        return render_template('registrar/agregar-hincha.html')
+    if request.method == 'POSThjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj':
+        return render_template('registrar/agregar-hincha.html')
 
 @app.route('/listado-artesanos', methods=['GET', 'POST'])
 def listado_artesanos():
