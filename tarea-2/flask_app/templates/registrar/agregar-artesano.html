@@ -7,10 +7,7 @@
   href="{{ url_for('static', filename='css/style-registro.css')}}"
 />
 {% endblock %}
-{% block javascript %}
-<script src="flask_app/static/js/gestor-comunas/regiones-comunas.js"></script>
-<script src="flask_app/static/js/gestor-comunas/gestor-regiones-comunas.js"></script>
-{% endblock %}
+<script src="{{ url_for('static', filename='js/gestor-comunas/gestor-regiones-comunas.js') }}"></script>
 {% block content %}
 <div class="titulo-artesano">
   <div class="title">
@@ -30,12 +27,12 @@
     <fieldset>
       <div id="region-input" class="grupo-input">
         <label for="region">Región</label><br>
-        <select id="regiones"></select><br>
+        <select id="region"></select><br>
       </div>
   
       <div id="comuna-input" class="grupo-input">
         <label for="comuna">Comuna</label><br>
-        <select id="comunas"></select><br>
+        <select id="comuna"></select><br>
       </div>
   
       <div id="tipoArtesania-input" class="grupo-input">
@@ -92,12 +89,10 @@
     <input id="confirmation-btn" type="button" value="Sí, confirmo.">
     <input id="cancel-btn" type="button" value="No, cancelar.">
   </div>
-  {% if envioConfirmado %}
   <div id="sent-box">
     <p>Hemos recibido el registro de artesano. Muchas gracias.</p>
     <p><a href="./index.html">Volver al inicio</a></p>
   </div>
-  {% endif %}
 </div>
 {% endblock %}
 {% block javascript %}

@@ -57,9 +57,9 @@ def registrar_artesano():
         else: 
             return render_template("registrar/agregar-artesano.html", error=msg)
             #error += "Uno de los campos no es válido
-    elif request.method == "GET":
+    elif request.method == 'GET':
         msg = ""
-        return render_template("registrar/agregar-artesano.html", error=msg)
+        return render_template("registrar/agregar-artesano.html")
 
 
 if __name__ == '__main__':
